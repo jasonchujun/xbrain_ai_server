@@ -57,7 +57,7 @@ class BaseDocxExtract(object):
 
     def get_docx_structure(self):
         tmp = []
-        for index,para in enumerate(iter_block_items(self.document)):
+        for index, para in enumerate(iter_block_items(self.document)):
             style_name = para.style.name
 
             if 'docx.table.Table' in str(para):
@@ -69,7 +69,8 @@ class BaseDocxExtract(object):
 
             if 'imagedata' in para._p.xml:
                 rid = re.findall('imagedata r:id=(.*?) ', para._p.xml)[0].replace('"', '')
-                tmp.append({'index': index, 'type': 'image', 'style': style_name, 'content': base64.b64encode(get_image_with_rel(self.document, rid))})
+                tmp.append({'index': index, 'type': 'image', 'style': style_name,
+                            'content': base64.b64encode(get_image_with_rel(self.document, rid))})
                 continue
 
             doc = para.text.strip()
@@ -103,11 +104,13 @@ class BaseDocxExtract(object):
                     count[current_level - 1] += 1
                     content[current_level:] = [0 for _ in range(current_level, 10)]
                     count[current_level:] = [0 for _ in range(current_level, 10)]
-                path_content = remove_special_symbols(self.document.core_properties.title + ' ' + ' '.join([str(v) for v in content if v != 0]))
+                path_content = remove_special_symbols(
+                    self.document.core_properties.title + ' ' + ' '.join([str(v) for v in content if v != 0]))
                 if set(content) == {0}:
                     tmp.append({'chapter': 0, 'title': elm['content'], 'path_content': elm['content']})
                 else:
-                    tmp.append({'chapter': '.'.join([str(v) for v in count if v != 0]), 'title': [str(v) for v in content if v != 0][-1], 'path_content': path_content})
+                    tmp.append({'chapter': '.'.join([str(v) for v in count if v != 0]),
+                                'title': [str(v) for v in content if v != 0][-1], 'path_content': path_content})
         return {'name': self.document.core_properties.title, 'catalog': tmp}
 
     def recovery_docx(self):

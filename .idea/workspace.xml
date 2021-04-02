@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59119652-4320-413d-8c74-074bf7067599" name="Default Changelist" comment="" />
+    <list default="true" id="59119652-4320-413d-8c74-074bf7067599" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract/tools/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract/tools/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract/tools/embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract/tools/embedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract/tools/extract_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract/tools/extract_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract/tools/extract_document.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract/tools/extract_document.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qb2wC7QZEUoyCA9kXfGe7L4Hvv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +29,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xbrain_spider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="xbrain_ai_serve" type="Python.DjangoServer" factoryName="Django server">
@@ -54,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617334204565</updated>
       <workItem from="1617334205777" duration="20000" />
+      <workItem from="1617338832066" duration="269000" />
     </task>
     <servers />
   </component>
@@ -65,5 +82,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1617334224014" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1617339101296">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1617339101296" />
   </component>
 </project>

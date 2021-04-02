@@ -13,4 +13,3 @@ class BaseSentenceEmbedding(object):
         cos_scores = util.pytorch_cos_sim(embeddings, vectors_array)[0]
         top_results = torch.topk(cos_scores, k=topk)
         return top_results
-

@@ -16,19 +16,19 @@ def walk_file(file):
                 res.append(os.path.join(root, f))
 
         # 遍历所有的文件夹
-#         for d in dirs:
-#             print(os.path.join(root, d))
+    #         for d in dirs:
+    #             print(os.path.join(root, d))
     return res
 
 
 def query_with(kv):
     doc = {
-            "query": {
-                "bool": {
-                    "must": []
-                }
+        "query": {
+            "bool": {
+                "must": []
             }
         }
+    }
     for k, v in kv:
         doc["query"]["bool"]["must"].append({"term": {k: v}})
     return doc
@@ -38,7 +38,8 @@ def load_vecs(es_ctrl):
     name_vecs = pd.DataFrame([], columns=['path', 'name', 'name_embedding'])
     catalog_vecs = pd.DataFrame([], columns=['path', 'chapter', 'title', 'path_content'])
     content_vecs = pd.DataFrame([], columns=['path', 'index', 'content', 'embedding'])
-    images_vecs = pd.DataFrame([], columns=['path', 'index', 'desc', 'content', 'desc_embeddings', 'content_embeddings'])
+    images_vecs = pd.DataFrame([],
+                               columns=['path', 'index', 'desc', 'content', 'desc_embeddings', 'content_embeddings'])
 
     data = []
     for i in range(0, 5):

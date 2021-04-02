@@ -22,7 +22,8 @@ class CPPCodeHandle(BaseCodeHandle):
         tmp = []
         for cursor in tu.cursor.walk_preorder():
             location = dict()
-            location['source'], location['line'], location['column'] = re.findall('file (.*?), line (\d+), column (\d+)', str(cursor.location))[0]
+            location['source'], location['line'], location['column'] = \
+            re.findall('file (.*?), line (\d+), column (\d+)', str(cursor.location))[0]
             raw_comment = re.sub("[\*\/\\r\\n]", '', str(cursor.raw_comment)).strip().replace('  ', ' ')
             data = {'kind': cursor.kind, 'spelling': cursor.spelling, 'location': location, 'raw_comment': raw_comment}
             tmp.append(data)
